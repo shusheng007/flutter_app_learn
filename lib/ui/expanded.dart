@@ -15,7 +15,7 @@ class ExpandedPage extends StatelessWidget {
           children: [
             Text('Expanded一般用在Column或者Row中，使被包裹的控件按比例占据尽可能多的空间'),
             Text('1. 当只有一个Expanded控件时，一般不设置其flex属性，它占据剩余的所有空间'),
-            Text('2. 当有多个Expanded控件时，通过其flex属性来设置他们直接的比例'),
+            Text('2. 当有多个Expanded控件时，通过其flex属性来设置他们之间的比例'),
             SizedBox(
               height: 15,
             ),

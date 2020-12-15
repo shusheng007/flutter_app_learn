@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app_learn/models/route_item.dart';
 import 'package:flutter_app_learn/ui/expanded.dart';
 import 'package:flutter_app_learn/ui/safe_area.dart';
+import 'package:flutter_app_learn/ui/wrap.dart';
 
 const String ROUTE_SAFE_AREA='safe-area-route';
 const String ROUTE_EXPANDED='expanded-route';
@@ -30,6 +31,10 @@ class MyApp extends StatelessWidget {
             return MaterialPageRoute(builder: (context)=>SafeAreaPage());
           case ROUTE_EXPANDED:
             return MaterialPageRoute(builder: (context)=>ExpandedPage());
+          case ROUTE_WRAP:
+            return MaterialPageRoute(builder: (context)=>WrapPage());
+          default:
+            return MaterialPageRoute(builder: (context) => HomePage());
         }
       },
     );
