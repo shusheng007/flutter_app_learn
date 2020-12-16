@@ -8,14 +8,24 @@ class ExpandedPage extends StatelessWidget {
         title: Text('Expanded'),
       ),
       body: Padding(
-        padding: EdgeInsets.all(16),
+        padding: EdgeInsets.all(12),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisSize: MainAxisSize.min,
           children: [
-            Text('Expanded一般用在Column或者Row中，使被包裹的控件按比例占据尽可能多的空间'),
-            Text('1. 当只有一个Expanded控件时，一般不设置其flex属性，它占据剩余的所有空间'),
-            Text('2. 当有多个Expanded控件时，通过其flex属性来设置他们之间的比例'),
+            Container(
+              padding: EdgeInsets.fromLTRB(12, 5, 12, 5),
+              width: double.infinity,
+              decoration: BoxDecoration(
+                border: Border.all(
+                  color: Colors.black45,
+                ),
+                borderRadius: BorderRadius.all(Radius.circular(5.0)),
+              ),
+              child: Text('Expanded一般用在Column或者Row中，使被包裹的控件按比例占据尽可能多的空间\n' +
+                  '1. 当只有一个Expanded控件时，一般不设置其flex属性，它占据剩余的所有空间\n' +
+                  '2. 当有多个Expanded控件时，通过其flex属性来设置他们之间的比例'),
+            ),
             SizedBox(
               height: 15,
             ),
@@ -23,8 +33,13 @@ class ExpandedPage extends StatelessWidget {
               children: [
                 Expanded(
                   child: Container(
+                    alignment: AlignmentDirectional.center,
                     color: Colors.red,
                     height: 50,
+                    child: Text(
+                      '占据所有剩余空间',
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ),
                 ),
                 Container(
@@ -34,7 +49,9 @@ class ExpandedPage extends StatelessWidget {
                 )
               ],
             ),
-            SizedBox(height: 20,),
+            SizedBox(
+              height: 40,
+            ),
             Row(
               children: [
                 Expanded(
@@ -59,7 +76,6 @@ class ExpandedPage extends StatelessWidget {
                 )
               ],
             )
-
           ],
         ),
       ),

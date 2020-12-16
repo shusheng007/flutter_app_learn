@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_learn/models/route_item.dart';
 import 'package:flutter_app_learn/ui/expanded.dart';
+import 'package:flutter_app_learn/ui/opacity.dart';
 import 'package:flutter_app_learn/ui/safe_area.dart';
 import 'package:flutter_app_learn/ui/wrap.dart';
 
@@ -33,6 +34,8 @@ class MyApp extends StatelessWidget {
             return MaterialPageRoute(builder: (context)=>ExpandedPage());
           case ROUTE_WRAP:
             return MaterialPageRoute(builder: (context)=>WrapPage());
+         case ROUTE_OPACITY:
+            return MaterialPageRoute(builder: (context)=>OpacityPage());
           default:
             return MaterialPageRoute(builder: (context) => HomePage());
         }

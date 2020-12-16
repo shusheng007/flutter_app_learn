@@ -11,14 +11,26 @@ class WrapPage extends StatelessWidget {
         padding: EdgeInsets.all(12),
         child: Column(
           children: [
-            Text(
-              'Wrap 可以简单理解为可换行的row或者column。如果我们向一个宽度固定的row添加很多控件，后面的控件就有可能溢出，但如果使用wrap却可以自动换行',
-              style: TextStyle(fontSize: 15, height: 1.5),
+            Container(
+              padding: EdgeInsets.fromLTRB(12, 5, 12, 5),
+              width: double.infinity,
+              decoration: BoxDecoration(
+                border: Border.all(
+                  color: Colors.black45,
+                ),
+                borderRadius: BorderRadius.all(Radius.circular(5.0)),
+              ),
+              child: Text(
+                'Wrap 可以简单理解为可换行的row或者column。如果我们向一个宽度固定的row添加很多控件，后面的控件就有可能溢出，但如果使用wrap却可以自动换行',
+                style: TextStyle(fontSize: 15, height: 1.5),
+              ),
+
             ),
             SizedBox(
               height: 25,
             ),
             Container(
+              width: double.infinity,
               color: Colors.lightBlueAccent,
               child: Wrap(
                 direction: Axis.horizontal,
