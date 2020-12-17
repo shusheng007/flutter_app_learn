@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_learn/models/route_item.dart';
 import 'package:flutter_app_learn/ui/expanded.dart';
+import 'package:flutter_app_learn/ui/future_builder.dart';
 import 'package:flutter_app_learn/ui/opacity.dart';
+import 'package:flutter_app_learn/ui/pageview.dart';
 import 'package:flutter_app_learn/ui/safe_area.dart';
 import 'package:flutter_app_learn/ui/wrap.dart';
 
-const String ROUTE_SAFE_AREA='safe-area-route';
+const String ROUTE_SAFE_AREA='safeArea-route';
 const String ROUTE_EXPANDED='expanded-route';
 const String ROUTE_WRAP='wrap-route';
-const String ROUTE_OPACITY='opacity';
+const String ROUTE_OPACITY='opacity-route';
+const String ROUTE_FUTURE_BUILDER='futureBuilder-route';
+const String ROUTE_PAGE_VIEW='pageView-route';
 
 void main() {
   runApp(MyApp());
@@ -36,6 +40,10 @@ class MyApp extends StatelessWidget {
             return MaterialPageRoute(builder: (context)=>WrapPage());
          case ROUTE_OPACITY:
             return MaterialPageRoute(builder: (context)=>OpacityPage());
+         case ROUTE_FUTURE_BUILDER:
+            return MaterialPageRoute(builder: (context)=>FutureBuilderPage());
+          case ROUTE_PAGE_VIEW:
+            return MaterialPageRoute(builder: (context)=>PageViewPage());
           default:
             return MaterialPageRoute(builder: (context) => HomePage());
         }
@@ -50,6 +58,8 @@ class HomePage extends StatelessWidget {
     RouteItem(ROUTE_EXPANDED, 'Expanded'),
     RouteItem(ROUTE_WRAP, 'Wrap'),
     RouteItem(ROUTE_OPACITY, 'Opacity'),
+    RouteItem(ROUTE_FUTURE_BUILDER, 'FutureBuilder'),
+    RouteItem(ROUTE_PAGE_VIEW, 'PageView'),
   ];
 
   @override

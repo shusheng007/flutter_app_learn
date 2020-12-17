@@ -21,7 +21,8 @@ class WrapPage extends StatelessWidget {
                 borderRadius: BorderRadius.all(Radius.circular(5.0)),
               ),
               child: Text(
-                'Wrap 可以简单理解为可换行的row或者column。如果我们向一个宽度固定的row添加很多控件，后面的控件就有可能溢出，但如果使用wrap却可以自动换行',
+                'Wrap 可以理解为可换行的row或者column。如果我们向一个宽度固定的row添加很多控件则会溢出，但使用wrap却可以自动换行\n'+
+                    '1. 横向换行\n 2. 纵向换列',
                 style: TextStyle(fontSize: 15, height: 1.5),
               ),
 

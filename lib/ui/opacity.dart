@@ -45,7 +45,7 @@ class _OpacityPageState extends State<OpacityPage> {
             height: 30,
           ),
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               Container(
                 width: 80,
