@@ -5,6 +5,7 @@ import 'package:flutter_app_learn/ui/future_builder.dart';
 import 'package:flutter_app_learn/ui/opacity.dart';
 import 'package:flutter_app_learn/ui/pageview.dart';
 import 'package:flutter_app_learn/ui/safe_area.dart';
+import 'package:flutter_app_learn/ui/tab_bar.dart';
 import 'package:flutter_app_learn/ui/wrap.dart';
 
 const String ROUTE_SAFE_AREA='safeArea-route';
@@ -13,6 +14,7 @@ const String ROUTE_WRAP='wrap-route';
 const String ROUTE_OPACITY='opacity-route';
 const String ROUTE_FUTURE_BUILDER='futureBuilder-route';
 const String ROUTE_PAGE_VIEW='pageView-route';
+const String ROUTE_TAB_BAR='tabBar-route';
 
 void main() {
   runApp(MyApp());
@@ -22,7 +24,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'FlutterWidet',
+      title: 'FlutterWidget',
       theme: ThemeData(
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
@@ -44,6 +46,8 @@ class MyApp extends StatelessWidget {
             return MaterialPageRoute(builder: (context)=>FutureBuilderPage());
           case ROUTE_PAGE_VIEW:
             return MaterialPageRoute(builder: (context)=>PageViewPage());
+            case ROUTE_TAB_BAR:
+            return MaterialPageRoute(builder: (context)=>TabBarPage());
           default:
             return MaterialPageRoute(builder: (context) => HomePage());
         }
@@ -60,6 +64,7 @@ class HomePage extends StatelessWidget {
     RouteItem(ROUTE_OPACITY, 'Opacity'),
     RouteItem(ROUTE_FUTURE_BUILDER, 'FutureBuilder'),
     RouteItem(ROUTE_PAGE_VIEW, 'PageView'),
+    RouteItem(ROUTE_TAB_BAR, 'TabBar'),
   ];
 
   @override
