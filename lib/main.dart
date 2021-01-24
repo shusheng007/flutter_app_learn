@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_learn/models/route_item.dart';
+import 'package:flutter_app_learn/ui/enhance_tab_bar.dart';
 import 'package:flutter_app_learn/ui/expanded.dart';
 import 'package:flutter_app_learn/ui/future_builder.dart';
 import 'package:flutter_app_learn/ui/opacity.dart';
@@ -47,6 +48,7 @@ class MyApp extends StatelessWidget {
           case ROUTE_PAGE_VIEW:
             return MaterialPageRoute(builder: (context)=>PageViewPage());
             case ROUTE_TAB_BAR:
+            // return MaterialPageRoute(builder: (context)=>EnhanceTabBar());
             return MaterialPageRoute(builder: (context)=>TabBarPage());
           default:
             return MaterialPageRoute(builder: (context) => HomePage());
